@@ -29,4 +29,19 @@ public class PokemonController {
     public Pokemon crear(@RequestBody Pokemon pokemon){
         return pokemonService.crear(pokemon);
     }
+
+    @PutMapping("/{id}")
+    public Pokemon actualizar(@PathVariable Long id, @RequestBody Pokemon pokemon){
+        return pokemonService.actualizar(id, pokemon).orElse(null);
+    }
+
+    @PatchMapping("/{id}")
+    public Pokemon actualizarParcial(@PathVariable Long id, @RequestBody Pokemon pokemon){
+        return pokemonService.actualizarParcialmente(id, pokemon).orElse(null);
+    }
+
+    @DeleteMapping("/{id}")
+    public void eliminar(@PathVariable Long id){
+        pokemonService.eliminarPokemon(id);
+    }
 }
