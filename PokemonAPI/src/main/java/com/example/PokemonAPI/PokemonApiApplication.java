@@ -1,4 +1,4 @@
-package com.example.PokemonAPI;
+package com.example.PokemonApi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
